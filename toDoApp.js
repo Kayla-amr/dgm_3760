@@ -1,5 +1,6 @@
 //The start of my ToDo App list
-var toDo = [
+
+let toDo = [
 	{
 		id: 1,
 		name: 'Choose photography theme',
@@ -16,45 +17,23 @@ var toDo = [
 	}
 ];
 
+//function will call array and display objects
+function displayList() {
+	//giving a new varial to the class in HTML called .toDos
+	let myList = document.querySelector('.toDos');
 
+	//empty variable
+	let tasks = '';
 
+	// for loop will go through each object and call the name, adding it to the list
+	for (let task of toDo) { 
+		tasks += '<li>' + task.name + '</li>';
+	}
 
-//defining HTML ID tags
-document.getElementsByClassName('toDos').firstChild.nodeValue = toDo;
-
-
-//Display the ToDo List
-function list(){
-    return toDo();
+	//adding the tasks to the class .toDos which we now called myList
+	myList.innerHTML = tasks;
 }
 
-//Allow to edit a ToDo
-function editName(){
-    
-}
 
-//Allow to change status on a ToDo
-function editStatus(){
-
-}
-
-//Allow to adjust the category of a ToDo
-function editCategory(){
-
-}
- 
-//Changes the due date of a ToDo
-function editDueDate(){
-
-}
-
-//give the user the advantage to mark the ToDo as complete
-function completeToDo(){
-
-}
-
-//allows to remove ToDo from app
-function deleteToDo(){
- toDo.shift()
-}
-
+// Calling functions
+displayList()
