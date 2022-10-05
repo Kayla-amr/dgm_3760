@@ -15,23 +15,16 @@ let toDo = [
 	}
 ];
 
-let myApp = document.querySelector('.myApp');
-
-function displayTitle() {
-	
-
-	let appTitle = document.createElement('h1');
-	appTitle.textContent = 'Basic Todo App';
-
-	myApp.appendChild(appTitle);
+function displayTitle(){
+    myApp.appendChild(appTitle);
 }
 
-// view todos
-function addTask() {
-	let newTask = document.createElement('input');
-	newTask.placeholder = 'New task';
 
-	myApp.appendChild(newTask);
+// view todos
+function addTask (){
+    let newTask = document.createElement('input')
+    newTask.placeholder = 'New task'
+    myApp.appendChild(newTask)
 }
 
 //add todos
@@ -46,5 +39,10 @@ function addTask() {
 //show number of todos left
 
 //clear all to
-displayTitle();
-addTask();
+
+
+
+
+
+
+addTask()

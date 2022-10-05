@@ -15,25 +15,27 @@ let toDo = [
 	}
 ];
 
-let myApp = document.querySelector('.myApp');
 
-function displayTitle() {
-	
+let myApp = document.querySelector('.myApp')
 
-	let appTitle = document.createElement('h1');
-	appTitle.textContent = 'Basic Todo App';
+let appTitle = document.createElement ('h1')
+appTitle.textContent = 'Basic Todo App'
 
-	myApp.appendChild(appTitle);
-}
+myApp.appendChild(appTitle);
 
 // view todos
-function addTask() {
-	let newTask = document.createElement('input');
-	newTask.placeholder = 'New task';
+let myList = toDo.values()
 
-	myApp.appendChild(newTask);
-}
-
+let displayList = () => {
+	let myTasks = '';
+	
+	for (let task of myList) {
+		// for loop will go through each object and call the name, adding it to the list
+		m document.createElement ('li').myTasks.name
+	}
+	document.querySelector (myApp).innerText = myTasks
+};
+// Calling functions
 //add todos
 // let addTask = document.createElement('input');
 // addTask.type = 'new task';
@@ -46,5 +48,3 @@ function addTask() {
 //show number of todos left
 
 //clear all to
-displayTitle();
-addTask();

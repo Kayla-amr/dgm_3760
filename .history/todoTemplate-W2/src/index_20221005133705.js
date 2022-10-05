@@ -15,8 +15,6 @@ let toDo = [
 	}
 ];
 
-let myApp = document.querySelector('.myApp');
-
 function displayTitle() {
 	
 
