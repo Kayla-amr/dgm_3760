@@ -2,10 +2,9 @@
 let myApp = document.querySelector('.myApp')
 
 let appTitle = document.createElement ('h1')
-appTitle.textContent = 'Basic Todo App'
+appTitle.textContent = 'Basic Todo App';
 
 // view todos
-
 //add todos
 // let addTask = document.createElement('input');
 // addTask.type = 'new task';

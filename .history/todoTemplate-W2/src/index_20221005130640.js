@@ -1,8 +1,4 @@
-
-let myApp = document.querySelector('.myApp')
-
-let appTitle = document.createElement ('h1')
-appTitle.textContent = 'Basic Todo App'
+import './styles.css';
 
 // view todos
 
@@ -18,9 +14,7 @@ appTitle.textContent = 'Basic Todo App'
 //show number of todos left
 
 //clear all to
+let appTitle = document.createElement ('h1');
+appTitle.innerText = 'Basic Todo App'
 
-
-
-
-
-myApp.appendChild(appTitle);
+let myApp = document.querer
