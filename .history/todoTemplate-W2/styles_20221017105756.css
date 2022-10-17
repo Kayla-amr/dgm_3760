@@ -5,6 +5,7 @@ body{
 main{
     display: flex;
     justify-content: center;
+    align-self: center;
 }
 .taskForm{
     background-color: #262524;

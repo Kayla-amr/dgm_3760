@@ -1,10 +1,6 @@
-body{
-    background-color: #557f49;
-    color: #f2f2f2;
-}
 main{
-    display: flex;
-    justify-content: center;
+    background-color: ;
+    color: #f2f2f2;
 }
 .taskForm{
     background-color: #262524;

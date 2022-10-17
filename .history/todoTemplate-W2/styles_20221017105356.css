@@ -1,0 +1,13 @@
+.taskForm{
+    background-color: #eaaf19;
+    padding: 20px;
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.userInput{
+    background-color: #eaaf1900;
+    border: 1px solid gray;
+}

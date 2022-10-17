@@ -1,11 +1,3 @@
-body{
-    background-color: #557f49;
-    color: #f2f2f2;
-}
-main{
-    display: flex;
-    justify-content: center;
-}
 .taskForm{
     background-color: #262524;
     padding: 20px;
@@ -19,5 +11,4 @@ main{
 .userInput{
     background-color: #eaaf1900;
     border: 1px solid #808080a1;
-    color: #f2f2f2;
 }
