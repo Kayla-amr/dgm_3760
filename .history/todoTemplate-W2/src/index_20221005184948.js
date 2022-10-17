@@ -28,7 +28,7 @@ function displayTitle() {
 
 // view todos
 function addTask() {
-	document.createElement('input').addEventListener('input')
+	document.createElement('input');
 
 	newTask.placeholder = 'New task';
 

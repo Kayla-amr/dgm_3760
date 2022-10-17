@@ -28,8 +28,8 @@ function displayTitle() {
 
 // view todos
 function addTask() {
-	document.createElement('input').addEventListener('input')
-
+	let newTask = document.createElement('input');
+    
 	newTask.placeholder = 'New task';
 
 	myApp.appendChild(newTask);
