@@ -24,16 +24,11 @@ document.querySelector('.formTitle').innerText = 'Basic App Form';
 function displayTodos(todos) {
 	//clear out any tasks (li elements) that are in the UL
 	todoTaskUl.innerHTML = '';
-  completedTaskUL.innerHTML = '';
+
 	//for each todo in the array, add it to the container UL
 	todos.forEach(function(myTask) {
-    if (myTask.status != true) {
-      todoTaskUl.innerHTML += `<li data-todoId='${myTask.id}'> ${myTask.name} </li>`;
-    } else {
-      completedTaskUL.style.textDecoration = 'line-through'
-      completedTaskUL.innerHTML += `<li data-todoId='${myTask.id}'> ${myTask.name} </li>`;
-    }
-		
+    if
+		todoTaskUl.innerHTML += `<li data-todoId='${myTask.id}'> ${myTask.name} </li>`;
 	});
 }
 

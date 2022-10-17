@@ -29,10 +29,7 @@ function displayTodos(todos) {
 	todos.forEach(function(myTask) {
     if (myTask.status != true) {
       todoTaskUl.innerHTML += `<li data-todoId='${myTask.id}'> ${myTask.name} </li>`;
-    } else {
-      completedTaskUL.style.textDecoration = 'line-through'
-      completedTaskUL.innerHTML += `<li data-todoId='${myTask.id}'> ${myTask.name} </li>`;
-    }
+    } 
 		
 	});
 }
@@ -63,6 +60,10 @@ function addTask(){
 
 // create a function to complete todos
 function completeTask(){
+  if(myTask.i) {
+    completedTaskUL.style.textDecoration = 'line-through'
+    completedTaskUL.innerHTML += `<li data-todoId='${myTask.id}'> ${myTask.name} </li>`;
+  }
 	// function will take 1 parameter (input) an id of the todo to complete
 	// find the todo to complete and then change the value of status in the todo object
 		//use the .findIndex method to get the index

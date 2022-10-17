@@ -29,10 +29,7 @@ function displayTodos(todos) {
 	todos.forEach(function(myTask) {
     if (myTask.status != true) {
       todoTaskUl.innerHTML += `<li data-todoId='${myTask.id}'> ${myTask.name} </li>`;
-    } else {
-      completedTaskUL.style.textDecoration = 'line-through'
-      completedTaskUL.innerHTML += `<li data-todoId='${myTask.id}'> ${myTask.name} </li>`;
-    }
+    } 
 		
 	});
 }

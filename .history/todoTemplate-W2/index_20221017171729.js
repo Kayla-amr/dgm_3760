@@ -11,7 +11,7 @@ let myList = [
 		name: 'Organize music',
 		category: 'Chores',
 		due_date: 'Wednesday',
-		status: true
+		status: false
 	}
 ];
 
@@ -23,17 +23,11 @@ document.querySelector('.formTitle').innerText = 'Basic App Form';
 
 function displayTodos(todos) {
 	//clear out any tasks (li elements) that are in the UL
-	todoTaskUl.innerHTML = '';
-  completedTaskUL.innerHTML = '';
+	taskUl.innerHTML = '';
+
 	//for each todo in the array, add it to the container UL
 	todos.forEach(function(myTask) {
-    if (myTask.status != true) {
-      todoTaskUl.innerHTML += `<li data-todoId='${myTask.id}'> ${myTask.name} </li>`;
-    } else {
-      completedTaskUL.style.textDecoration = 'line-through'
-      completedTaskUL.innerHTML += `<li data-todoId='${myTask.id}'> ${myTask.name} </li>`;
-    }
-		
+		taskUl.innerHTML += `<li data-todoId='${myTask.id}'> ${myTask.name} </li>`;
 	});
 }
 
@@ -81,10 +75,9 @@ function deleteTask(){
 //for complete and delete event listeners you will need to listen for events on the UL
 
 //get a reference to the task container UL
-const todoTaskUl = document.querySelector('.todoTasks');
-const completedTaskUL = document.querySelector('.completedTasks');
+const todotaskUl = document.querySelector('.todoTasks');
 
-todoTaskUl.addEventListener('click', (event) => {
+taskUl.addEventListener('click', (event) => {
 	//get the id of the todo that the user clicked on.
 	console.log(event.target.dataset.todoid)
 

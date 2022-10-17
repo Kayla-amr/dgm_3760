@@ -24,7 +24,7 @@ document.querySelector('.formTitle').innerText = 'Basic App Form';
 function displayTodos(todos) {
 	//clear out any tasks (li elements) that are in the UL
 	todoTaskUl.innerHTML = '';
-  completedTaskUL.innerHTML = '';
+  completedTaskUL.innerHTML = ''
 	//for each todo in the array, add it to the container UL
 	todos.forEach(function(myTask) {
     if (myTask.status != true) {
