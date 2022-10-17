@@ -14,7 +14,7 @@ let myList = [
 		status: false
 	}
 ];
-
+myList.values
 //app title
 document.querySelector('.formTitle').innerText = 'Basic App Form';
 

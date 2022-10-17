@@ -31,10 +31,10 @@ myList.forEach(function(myTask) {
 //   myList()
 // };
 function addTask(){
-  let userInput = document.querySelector('.userInput').value;
-  myList.name.push(userInput);
+  let userInput = document.querySelector('.userInput').value
+  myList.name.push(userInput)
 }
-console.log(myList.name);
+console.log(myList);
 document.querySelector('.addTask').onClick = addTask
 
 
