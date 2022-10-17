@@ -56,7 +56,7 @@ function addTask(){
 }
 
 // create a function to complete todos
-function completeTask(){
+function completeTask(input){
 	// function will take 1 parameter (input) an id of the todo to complete
 	// find the todo to complete and then change the value of status in the todo object
 		//use the .findIndex method to get the index

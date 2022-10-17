@@ -22,6 +22,8 @@ document.querySelector('.formTitle').innerText = 'Basic App Form';
 
 
 function displayTodos(todos) {
+	//get a reference to the task container UL
+
 	//clear out any tasks (li elements) that are in the UL
 	taskUl.innerHTML = '';
 
@@ -57,13 +59,13 @@ function addTask(){
 
 // create a function to complete todos
 function completeTask(){
+
+}
 	// function will take 1 parameter (input) an id of the todo to complete
 	// find the todo to complete and then change the value of status in the todo object
 		//use the .findIndex method to get the index
 		//then edit the object directly using bracket notation
 		//IE: myList[todoIDX].status
-}
-
 
 //create a function to delete todos
 function deleteTask(){
@@ -74,7 +76,7 @@ function deleteTask(){
 
 //for complete and delete event listeners you will need to listen for events on the UL
 
-//get a reference to the task container UL
+//grab reference to the contaier ul
 const taskUl = document.querySelector('.tasks');
 
 taskUl.addEventListener('click', (event) => {
