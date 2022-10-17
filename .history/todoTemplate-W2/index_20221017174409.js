@@ -45,7 +45,6 @@ function displayTodos(todos) {
 
 function addTask(){
   let userInput = document.querySelector('.userInput').value;
-  
   const newTodoObj = {
 	id: myList.length + 1,
 	name: userInput,
@@ -55,6 +54,7 @@ function addTask(){
 }
 
   myList.push(newTodoObj);
+
   displayTodos(myList)
 }
 

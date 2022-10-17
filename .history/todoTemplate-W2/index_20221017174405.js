@@ -45,7 +45,6 @@ function displayTodos(todos) {
 
 function addTask(){
   let userInput = document.querySelector('.userInput').value;
-  
   const newTodoObj = {
 	id: myList.length + 1,
 	name: userInput,
@@ -55,12 +54,15 @@ function addTask(){
 }
 
   myList.push(newTodoObj);
+
   displayTodos(myList)
 }
 
 // create a function to complete todos
 function completeTask(){
-  
+  const clickedTodoId = event.target.dataset.todoid
+
+	const todoIdx = myList.findIndex((todo) => todo.id == clickedTodoId)
 	// function will take 1 parameter (input) an id of the todo to complete
 	// find the todo to complete and then change the value of status in the todo object
 		//use the .findIndex method to get the index

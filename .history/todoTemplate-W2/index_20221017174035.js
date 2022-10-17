@@ -39,13 +39,15 @@ function displayTodos(todos) {
 
 //add todos
 
+//store element object for the add task button
+const addBtn = document.querySelector('.addTask')
 
-
-
+addBtn.addEventListener('click', (event) => {
+	addTask()
+})
 
 function addTask(){
   let userInput = document.querySelector('.userInput').value;
-  
   const newTodoObj = {
 	id: myList.length + 1,
 	name: userInput,
@@ -55,6 +57,7 @@ function addTask(){
 }
 
   myList.push(newTodoObj);
+
   displayTodos(myList)
 }
 
@@ -71,6 +74,7 @@ function completeTask(){
 
 //create a function to delete todos
 function deleteTask(){
+  
 	//much the same as the complete todo function
 	//instead of editing the object, you will need to remove it from the array
 }
@@ -78,31 +82,11 @@ function deleteTask(){
 
 //for complete and delete event listeners you will need to listen for events on the UL
 
+//get a reference to the task container UL
+const todoTaskUl = document.querySelector('.todoTasks');
+const completedTaskUL = document.querySelector('.completedTasks');
 
-const addBtn = document.querySelector('.addTask') //store element object for the add task button
-const todoTaskUl = document.querySelector('.todoTasks'); //get a reference to the task container UL
-const completedTaskUL = document.querySelector('.completedTasks'); //get a reference to the task container UL
 
-addBtn.addEventListener('click', (event) => {
-	addTask()
-})
-
-todoTaskUl.addEventListener('click', (event) => {
-	//get the id of the todo that the user clicked on.
-	console.log(event.target.dataset.todoid)
-
-	const clickedTodoId = event.target.dataset.todoid
-
-	const todoIdx = myList.findIndex((todo) => todo.id == clickedTodoId)
-
-	console.log(todoIdx)
-	//flip the status value
-	myList[todoIdx].status = !myList[todoIdx].status
-
-	console.log(myList)
-
-	displayTodos(myList)
-})
 
 completedTaskUL.addEventListener('click', (event) => {
 	//get the id of the todo that the user clicked on.
@@ -120,6 +104,7 @@ completedTaskUL.addEventListener('click', (event) => {
 
 	displayTodos(myList)
 })
+
 
 //on page load, show the todos
 displayTodos(myList)

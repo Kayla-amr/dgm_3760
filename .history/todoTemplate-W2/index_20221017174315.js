@@ -45,7 +45,6 @@ function displayTodos(todos) {
 
 function addTask(){
   let userInput = document.querySelector('.userInput').value;
-  
   const newTodoObj = {
 	id: myList.length + 1,
 	name: userInput,
@@ -55,12 +54,12 @@ function addTask(){
 }
 
   myList.push(newTodoObj);
+
   displayTodos(myList)
 }
 
 // create a function to complete todos
 function completeTask(){
-  
 	// function will take 1 parameter (input) an id of the todo to complete
 	// find the todo to complete and then change the value of status in the todo object
 		//use the .findIndex method to get the index
@@ -80,8 +79,9 @@ function deleteTask(){
 
 
 const addBtn = document.querySelector('.addTask') //store element object for the add task button
+
 const todoTaskUl = document.querySelector('.todoTasks'); //get a reference to the task container UL
-const completedTaskUL = document.querySelector('.completedTasks'); //get a reference to the task container UL
+const completedTaskUL = document.querySelector('.completedTasks');
 
 addBtn.addEventListener('click', (event) => {
 	addTask()
