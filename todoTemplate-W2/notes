@@ -1,0 +1,33 @@
+myList.values();
+let newList = []
+function myMap(arr, cb){
+  for (let i = 0; i < arr.length; i++) {
+    const element = arr[i];
+    newList.push(cb(element))
+  }
+  return newList;
+}
+
+myMap(myList, (num, idx, arr) => {
+  idx
+  document.createElement('li').innerText = num
+})
+
+
+
+function myTasks(arr, cb){
+    let newList = []
+  
+    for (let i = 0; i < myList.length; i++) {
+      const taskName = myList[i].name;
+      newList.push(cb(taskName))
+    }
+    return newList;
+  }
+  
+  myTasks(myList, (num) => {
+    console.log num
+  })
+
+  let userInput = document.querySelector('.userInput')
+  myList.push(userInput)
