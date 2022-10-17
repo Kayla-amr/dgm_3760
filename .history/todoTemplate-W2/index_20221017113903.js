@@ -27,7 +27,7 @@ myList.forEach(function(myTask) {
 let userInput = document.querySelector('.userInput');
 document.querySelector('.addTask').onClick = () => {
 	newTask = userInput.value;
-	myList.push(newTask);
+	myList.name.push(newTask);
 	console.log(myList.name);
 };
 

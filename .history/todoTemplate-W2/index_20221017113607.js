@@ -24,12 +24,8 @@ myList.forEach(function(myTask) {
 });
 
 //add todos
-let userInput = document.querySelector('.userInput');
-document.querySelector('.addTask').onClick = () => {
-	newTask = userInput.value;
-	myList.push(newTask);
-	console.log(myList.name);
-};
+let userInput = document.querySelector('.userInput')
+document.querySelector('.addTask').onClick
 
 // myTask(myList, (num) => {
 //   console.log (num)
