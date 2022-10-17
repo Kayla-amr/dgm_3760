@@ -59,7 +59,7 @@ function addTask(){
 }
 
 // create a function to complete todos
-function editTask(){
+function completeTask(){
   const clickedTodoId = event.target.dataset.todoid
 	const todoIdx = myList.findIndex((todo) => todo.id == clickedTodoId)
   myList[todoIdx].status = !myList[todoIdx].status
@@ -71,6 +71,15 @@ function editTask(){
 		//IE: myList[todoIDX].status
 }
 
+function undoCompletedTask(){
+  
+	const clickedTodoId = event.target.dataset.todoid
+	const todoIdx = myList.findIndex((todo) => todo.id == clickedTodoId)
+	myList[todoIdx].status = !myList[todoIdx].status
+
+  displayTodos(myList)
+
+}
 //create a function to delete todos
 function deleteTask(){
 	//much the same as the complete todo function
@@ -90,11 +99,11 @@ addBtn.addEventListener('click', (event) => {
 })
 
 todoTaskUl.addEventListener('click', (event) => {
-	editTask()
+	completeTask()
 })
 
 completedTaskUL.addEventListener('click', (event) => {
-  editTask()
+  undoCompletedTask()
 })
 
 //on page load, show the todos

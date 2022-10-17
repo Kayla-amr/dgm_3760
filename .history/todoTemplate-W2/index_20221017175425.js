@@ -71,6 +71,7 @@ function editTask(){
 		//IE: myList[todoIDX].status
 }
 
+}
 //create a function to delete todos
 function deleteTask(){
 	//much the same as the complete todo function

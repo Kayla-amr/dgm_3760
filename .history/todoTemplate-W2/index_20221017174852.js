@@ -59,8 +59,9 @@ function addTask(){
 }
 
 // create a function to complete todos
-function editTask(){
+function completeTask(){
   const clickedTodoId = event.target.dataset.todoid
+
 	const todoIdx = myList.findIndex((todo) => todo.id == clickedTodoId)
   myList[todoIdx].status = !myList[todoIdx].status
   displayTodos(myList)
@@ -70,6 +71,7 @@ function editTask(){
 		//then edit the object directly using bracket notation
 		//IE: myList[todoIDX].status
 }
+
 
 //create a function to delete todos
 function deleteTask(){
@@ -90,11 +92,24 @@ addBtn.addEventListener('click', (event) => {
 })
 
 todoTaskUl.addEventListener('click', (event) => {
-	editTask()
+	completeTask()
 })
 
 completedTaskUL.addEventListener('click', (event) => {
-  editTask()
+	//get the id of the todo that the user clicked on.
+	console.log(event.target.dataset.todoid)
+
+	const clickedTodoId = event.target.dataset.todoid
+
+	const todoIdx = myList.findIndex((todo) => todo.id == clickedTodoId)
+
+	console.log(todoIdx)
+	//flip the status value
+	myList[todoIdx].status = !myList[todoIdx].status
+
+	console.log(myList)
+
+	displayTodos(myList)
 })
 
 //on page load, show the todos

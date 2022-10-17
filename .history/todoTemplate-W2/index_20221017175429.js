@@ -70,7 +70,6 @@ function editTask(){
 		//then edit the object directly using bracket notation
 		//IE: myList[todoIDX].status
 }
-
 //create a function to delete todos
 function deleteTask(){
 	//much the same as the complete todo function

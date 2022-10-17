@@ -59,17 +59,15 @@ function addTask(){
 }
 
 // create a function to complete todos
-function editTask(){
-  const clickedTodoId = event.target.dataset.todoid
-	const todoIdx = myList.findIndex((todo) => todo.id == clickedTodoId)
-  myList[todoIdx].status = !myList[todoIdx].status
-  displayTodos(myList)
+function completeTask(){
+  
 	// function will take 1 parameter (input) an id of the todo to complete
 	// find the todo to complete and then change the value of status in the todo object
 		//use the .findIndex method to get the index
 		//then edit the object directly using bracket notation
 		//IE: myList[todoIDX].status
 }
+
 
 //create a function to delete todos
 function deleteTask(){
@@ -90,11 +88,37 @@ addBtn.addEventListener('click', (event) => {
 })
 
 todoTaskUl.addEventListener('click', (event) => {
-	editTask()
+	//get the id of the todo that the user clicked on.
+	//console.log(event.target.dataset.todoid)
+
+	const clickedTodoId = event.target.dataset.todoid
+
+	const todoIdx = myList.findIndex((todo) => todo.id == clickedTodoId)
+
+	//console.log(todoIdx)
+	//flip the status value
+	myList[todoIdx].status = !myList[todoIdx].status
+
+	//console.log(myList)
+
+	displayTodos(myList)
 })
 
 completedTaskUL.addEventListener('click', (event) => {
-  editTask()
+	//get the id of the todo that the user clicked on.
+	console.log(event.target.dataset.todoid)
+
+	const clickedTodoId = event.target.dataset.todoid
+
+	const todoIdx = myList.findIndex((todo) => todo.id == clickedTodoId)
+
+	console.log(todoIdx)
+	//flip the status value
+	myList[todoIdx].status = !myList[todoIdx].status
+
+	console.log(myList)
+
+	displayTodos(myList)
 })
 
 //on page load, show the todos
