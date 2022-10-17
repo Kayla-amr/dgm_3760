@@ -9,6 +9,7 @@ main{
 h2{
     margin: 0;
     padding: 5px;
+    text-align: left;
 }
 .taskForm{
     background-color: #262524;

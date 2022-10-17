@@ -75,7 +75,7 @@ function deleteTask(){
 //for complete and delete event listeners you will need to listen for events on the UL
 
 //get a reference to the task container UL
-const taskUl = document.querySelector('.todoTasks');
+const taskUl = document.querySelector('.tasks');
 
 taskUl.addEventListener('click', (event) => {
 	//get the id of the todo that the user clicked on.

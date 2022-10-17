@@ -34,7 +34,7 @@ function displayTodos(todos) {
 //add todos
 
 //store element object for the add task button
-const addBtn = document.querySelector('.addTask')
+const addBtn = document.querySelector('.todoTask')
 
 addBtn.addEventListener('click', (event) => {
 	addTask()
@@ -75,7 +75,7 @@ function deleteTask(){
 //for complete and delete event listeners you will need to listen for events on the UL
 
 //get a reference to the task container UL
-const taskUl = document.querySelector('.todoTasks');
+const taskUl = document.querySelector('.tasks');
 
 taskUl.addEventListener('click', (event) => {
 	//get the id of the todo that the user clicked on.
