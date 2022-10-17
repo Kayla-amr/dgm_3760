@@ -30,7 +30,7 @@ function displayTodos(todos) {
 
 	//for each todo in the array, add it to the container UL
 	todos.forEach(function(myTask) {
-		taskUl.innerHTML += `<li data-todoId='${myTask.id}'> ${myTask.name} </li>`;
+		taskUl.innerHTML += `<li> ${myTask.name} </li>`;
 	});
 }
 
@@ -69,34 +69,7 @@ function addTask(){
 	// find the todo to complete and then change the value of status in the todo object
 		//use the .findIndex method to get the index
 		//then edit the object directly using bracket notation
-		//IE: myList[todoIDX].status
-
-//create a function to delete todos
-	//much the same as the complete todo function
-	//instead of editing the object, you will need to remove it from the array
-
-//for complete and delete event listeners you will need to listen for events on the UL
-
-//grab reference to the contaier ul
-const taskUl = document.querySelector('.tasks');
-
-taskUl.addEventListener('click', (event) => {
-	//get the id of the todo that the user clicked on.
-	console.log(event.target.dataset.todoid)
-
-	const clickedTodoId = event.target.dataset.todoid
-
-	const todoIdx = myList.findIndex((todo) => todo.id == clickedTodoId)
-
-	console.log(todoIdx)
-	//flip the status value
-	myList[todoIdx].status = !myList[todoIdx].status
-
-	console.log(myList)
-
-	displayTodos(myList)
-})
-
+		//IE: myList[todoIDX]
 
 //on page load, show the todos
 displayTodos(myList)

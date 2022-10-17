@@ -84,17 +84,9 @@ taskUl.addEventListener('click', (event) => {
 	//get the id of the todo that the user clicked on.
 	console.log(event.target.dataset.todoid)
 
-	const clickedTodoId = event.target.dataset.todoid
+	const 
 
-	const todoIdx = myList.findIndex((todo) => todo.id == clickedTodoId)
-
-	console.log(todoIdx)
-	//flip the status value
-	myList[todoIdx].status = !myList[todoIdx].status
-
-	console.log(myList)
-
-	displayTodos(myList)
+	myList.findIndex((todo) => todo.id === )
 })
 
 

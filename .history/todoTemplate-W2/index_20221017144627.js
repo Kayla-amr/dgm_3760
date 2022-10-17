@@ -93,8 +93,6 @@ taskUl.addEventListener('click', (event) => {
 	myList[todoIdx].status = !myList[todoIdx].status
 
 	console.log(myList)
-
-	displayTodos(myList)
 })
 
 

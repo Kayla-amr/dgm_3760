@@ -30,7 +30,7 @@ function displayTodos(todos) {
 
 	//for each todo in the array, add it to the container UL
 	todos.forEach(function(myTask) {
-		taskUl.innerHTML += `<li data-todoId='${myTask.id}'> ${myTask.name} </li>`;
+		taskUl.innerHTML += `<li style='' data-todoId='${myTask.id}'> ${myTask.name} </li>`;
 	});
 }
 

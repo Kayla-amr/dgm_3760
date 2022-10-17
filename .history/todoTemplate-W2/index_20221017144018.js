@@ -30,7 +30,7 @@ function displayTodos(todos) {
 
 	//for each todo in the array, add it to the container UL
 	todos.forEach(function(myTask) {
-		taskUl.innerHTML += `<li data-todoId='${myTask.id}'> ${myTask.name} </li>`;
+		taskUl.innerHTML += `<li> ${myTask.name} </li>`;
 	});
 }
 
@@ -81,20 +81,7 @@ function addTask(){
 const taskUl = document.querySelector('.tasks');
 
 taskUl.addEventListener('click', (event) => {
-	//get the id of the todo that the user clicked on.
-	console.log(event.target.dataset.todoid)
-
-	const clickedTodoId = event.target.dataset.todoid
-
-	const todoIdx = myList.findIndex((todo) => todo.id == clickedTodoId)
-
-	console.log(todoIdx)
-	//flip the status value
-	myList[todoIdx].status = !myList[todoIdx].status
-
-	console.log(myList)
-
-	displayTodos(myList)
+	con
 })
 
 
