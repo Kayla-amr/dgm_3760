@@ -73,7 +73,7 @@ function editTask(){
 
 //create a function to delete todos
 function deleteTask(){
-  const removeBtn = document.createElement('button')
+  const clickedTodoId = document.createElement('button')
 	const todoIdx = myList.findIndex((todo) => todo.id == removeBtn)
   myList.splice(todoIdx,1)
   displayTodos(myList)
@@ -96,7 +96,6 @@ addBtn.addEventListener('click', (event) => {
 todoTaskUl.addEventListener('click', (event) => {
 	editTask()
 })
-
 
 completedTaskUL.addEventListener('click', (event) => {
   deleteTask()

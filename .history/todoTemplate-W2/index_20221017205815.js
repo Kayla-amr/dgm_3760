@@ -97,7 +97,6 @@ todoTaskUl.addEventListener('click', (event) => {
 	editTask()
 })
 
-
 completedTaskUL.addEventListener('click', (event) => {
   deleteTask()
 })

@@ -71,6 +71,7 @@ function editTask(){
 		//IE: myList[todoIDX].status
 }
 
+
 //create a function to delete todos
 function deleteTask(){
   const removeBtn = document.createElement('button')
@@ -96,7 +97,6 @@ addBtn.addEventListener('click', (event) => {
 todoTaskUl.addEventListener('click', (event) => {
 	editTask()
 })
-
 
 completedTaskUL.addEventListener('click', (event) => {
   deleteTask()

@@ -31,7 +31,7 @@ function displayTodos(todos) {
       todoTaskUl.innerHTML += `<li data-todoId='${myTask.id}'> ${myTask.name} </li>`;
     } else {
       completedTaskUL.style.textDecoration = 'line-through'
-      completedTaskUL.innerHTML += `<li data-todoId='${myTask.id}'> ${myTask.name} <button>-</button></li>`;
+      completedTaskUL.innerHTML += `<li data-todoId='${myTask.id}'> ${myTask.name} </li>`;
     }
 		
 	});
@@ -96,9 +96,11 @@ addBtn.addEventListener('click', (event) => {
 todoTaskUl.addEventListener('click', (event) => {
 	editTask()
 })
-
-
 completedTaskUL.addEventListener('click', (event) => {
+  editTask()
+})
+
+removeBtn.addEventListener('click', (event) => {
   deleteTask()
 })
 

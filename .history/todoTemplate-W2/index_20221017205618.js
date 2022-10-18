@@ -73,8 +73,8 @@ function editTask(){
 
 //create a function to delete todos
 function deleteTask(){
-  const removeBtn = document.createElement('button')
-	const todoIdx = myList.findIndex((todo) => todo.id == removeBtn)
+  const clickedTodoId = event.target.dataset.todoid
+	const todoIdx = myList.findIndex((todo) => todo.id == clickedTodoId)
   myList.splice(todoIdx,1)
   displayTodos(myList)
 	//much the same as the complete todo function
@@ -97,9 +97,8 @@ todoTaskUl.addEventListener('click', (event) => {
 	editTask()
 })
 
-
 completedTaskUL.addEventListener('click', (event) => {
-  deleteTask()
+  editTask()
 })
 
 //on page load, show the todos

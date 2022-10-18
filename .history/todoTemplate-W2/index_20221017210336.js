@@ -96,9 +96,11 @@ addBtn.addEventListener('click', (event) => {
 todoTaskUl.addEventListener('click', (event) => {
 	editTask()
 })
-
-
 completedTaskUL.addEventListener('click', (event) => {
+  editTask()
+})
+
+remove.addEventListener('click', (event) => {
   deleteTask()
 })
 

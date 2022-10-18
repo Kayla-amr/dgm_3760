@@ -31,7 +31,7 @@ function displayTodos(todos) {
       todoTaskUl.innerHTML += `<li data-todoId='${myTask.id}'> ${myTask.name} </li>`;
     } else {
       completedTaskUL.style.textDecoration = 'line-through'
-      completedTaskUL.innerHTML += `<li data-todoId='${myTask.id}'> ${myTask.name} <button>-</button></li>`;
+      completedTaskUL.innerHTML += `<li data-todoId='${myTask.id}'> ${myTask.name}</li>`;
     }
 		
 	});
@@ -73,7 +73,7 @@ function editTask(){
 
 //create a function to delete todos
 function deleteTask(){
-  const removeBtn = document.createElement('button')
+  
 	const todoIdx = myList.findIndex((todo) => todo.id == removeBtn)
   myList.splice(todoIdx,1)
   displayTodos(myList)
@@ -84,7 +84,7 @@ function deleteTask(){
 
 //for complete and delete event listeners you will need to listen for events on the UL
 
-
+const removeBtn = document.createElement('button').value
 const addBtn = document.querySelector('.addTask') //store element object for the add task button
 const todoTaskUl = document.querySelector('.todoTasks'); //get a reference to the task container UL
 const completedTaskUL = document.querySelector('.completedTasks'); //get a reference to the task container UL
@@ -96,7 +96,9 @@ addBtn.addEventListener('click', (event) => {
 todoTaskUl.addEventListener('click', (event) => {
 	editTask()
 })
-
+completedTaskUL.addEventListener('click', (event) => {
+  editTask()
+})
 
 completedTaskUL.addEventListener('click', (event) => {
   deleteTask()

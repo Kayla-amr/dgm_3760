@@ -70,6 +70,17 @@ function editTask(){
 		//then edit the object directly using bracket notation
 		//IE: myList[todoIDX].status
 }
+function editTask(){
+  const clickedTodoId = event.target.dataset.todoid
+	const todoIdx = myList.findIndex((todo) => todo.id == clickedTodoId)
+  myList[todoIdx].status = !myList[todoIdx].status
+  displayTodos(myList)
+	// function will take 1 parameter (input) an id of the todo to complete
+	// find the todo to complete and then change the value of status in the todo object
+		//use the .findIndex method to get the index
+		//then edit the object directly using bracket notation
+		//IE: myList[todoIDX].status
+}
 
 //create a function to delete todos
 function deleteTask(){
@@ -96,7 +107,6 @@ addBtn.addEventListener('click', (event) => {
 todoTaskUl.addEventListener('click', (event) => {
 	editTask()
 })
-
 
 completedTaskUL.addEventListener('click', (event) => {
   deleteTask()

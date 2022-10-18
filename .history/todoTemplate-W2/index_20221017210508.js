@@ -96,10 +96,12 @@ addBtn.addEventListener('click', (event) => {
 todoTaskUl.addEventListener('click', (event) => {
 	editTask()
 })
-
-
 completedTaskUL.addEventListener('click', (event) => {
-  deleteTask()
+  editTask()
+})
+
+removeBtn.createElement('button').addEventListener('click', (event) => {
+  deleteTask(myList)
 })
 
 //on page load, show the todos

@@ -25,13 +25,16 @@ function displayTodos(todos) {
 	//clear out any tasks (li elements) that are in the UL
 	todoTaskUl.innerHTML = '';
   completedTaskUL.innerHTML = '';
+
+  const li = document.createElement('li')
+  const removeBtn = document.createElement('button')
 	//for each todo in the array, add it to the container UL
 	todos.forEach(function(myTask) {
     if (myTask.status != true) {
-      todoTaskUl.innerHTML += `<li data-todoId='${myTask.id}'> ${myTask.name} </li>`;
+      todoTaskUl.appendChild(li)
     } else {
       completedTaskUL.style.textDecoration = 'line-through'
-      completedTaskUL.innerHTML += `<li data-todoId='${myTask.id}'> ${myTask.name} <button>-</button></li>`;
+      completedTaskUL.innerHTML += `<li data-todoId='${myTask.id}'> ${myTask.name}</li>`;
     }
 		
 	});
@@ -96,11 +99,13 @@ addBtn.addEventListener('click', (event) => {
 todoTaskUl.addEventListener('click', (event) => {
 	editTask()
 })
-
-
 completedTaskUL.addEventListener('click', (event) => {
-  deleteTask()
+  editTask()
 })
+
+// removeBtn.addEventListener('click', (event) => {
+//   deleteTask()
+// })
 
 //on page load, show the todos
 displayTodos(myList)
