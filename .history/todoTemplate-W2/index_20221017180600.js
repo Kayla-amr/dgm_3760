@@ -31,7 +31,7 @@ function displayTodos(todos) {
       todoTaskUl.innerHTML += `<li data-todoId='${myTask.id}'> ${myTask.name} </li>`;
     } else {
       completedTaskUL.style.textDecoration = 'line-through'
-      completedTaskUL.innerHTML += `<li data-todoId='${myTask.id}'> ${myTask.name} <button>-</button></li>`;
+      completedTaskUL.innerHTML += `<li data-todoId='${myTask.id}'> ${myTask.name} <b</li>`;
     }
 		
 	});
