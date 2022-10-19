@@ -30,8 +30,9 @@ function displayTodos(todos) {
     if (myTask.status != true) {
       todoTaskUl.innerHTML += `<li data-todoId='${myTask.id}'> ${myTask.name} </li>`;
     } else {
-      completedTaskUL.style.textDecoration = 'line-through'
-      completedTaskUL.innerHTML += `<li data-todoId='${myTask.id}'> ${myTask.name} <button class="removeBtn" onclick="deleteTask()">-</button></li>`;
+      completedTaskUL.style.textDecoration = 
+      'line-through'
+      completedTaskUL.innerHTML += `<li data-todoId='${myTask.id}'> ${myTask.name} </li>`;
     }
 		
 	});
@@ -97,6 +98,10 @@ todoTaskUl.addEventListener('click', (event) => {
 	editTask()
 })
 
+
+completedTaskUL.addEventListener('click', (event) => {
+  deleteTask()
+})
 
 //on page load, show the todos
 displayTodos(myList)

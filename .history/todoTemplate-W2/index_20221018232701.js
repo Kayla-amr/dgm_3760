@@ -98,5 +98,9 @@ todoTaskUl.addEventListener('click', (event) => {
 })
 
 
+completedTaskUL.addEventListener('click', (event) => {
+  deleteTask()
+})
+
 //on page load, show the todos
 displayTodos(myList)

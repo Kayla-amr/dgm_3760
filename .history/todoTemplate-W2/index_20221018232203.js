@@ -31,7 +31,7 @@ function displayTodos(todos) {
       todoTaskUl.innerHTML += `<li data-todoId='${myTask.id}'> ${myTask.name} </li>`;
     } else {
       completedTaskUL.style.textDecoration = 'line-through'
-      completedTaskUL.innerHTML += `<li data-todoId='${myTask.id}'> ${myTask.name} <button class="removeBtn" onclick="deleteTask()">-</button></li>`;
+      completedTaskUL.innerHTML += `<li data-todoId='${myTask.id}'> ${myTask.name} <button onclick="deleteTask()">-</button></li>`;
     }
 		
 	});
@@ -73,7 +73,6 @@ function editTask(){
 
 //create a function to delete todos
 function deleteTask(){
-  const removeBtn = document.querySelector('.removeBtn')
 	const todoIdx = myList.findIndex((todo) => todo.obj == removeBtn)
   myList.splice(todoIdx,1)
   displayTodos(myList)
@@ -97,6 +96,10 @@ todoTaskUl.addEventListener('click', (event) => {
 	editTask()
 })
 
+
+completedTaskUL.addEventListener('click', (event) => {
+  deleteTask()
+})
 
 //on page load, show the todos
 displayTodos(myList)
