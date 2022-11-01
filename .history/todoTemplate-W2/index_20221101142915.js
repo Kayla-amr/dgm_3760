@@ -68,8 +68,13 @@ function editTask() {
 //create a function to delete todos
 function deleteTask() {
 	const removeBtn = document.querySelector('.removeBtn');
-	const idx = myList.findIndex((todo) => todo.obj == removeBtn);
-	myList.splice(idx, 1);
+
+	myList.forEach((task, array) => {
+		
+		array.splice(task, 1)
+	})
+	// const todoIdx = myList.findIndex((todo) => todo.obj == removeBtn);
+	// myList.splice(todoIdx,1);
 	displayTodos(myList);
 	//much the same as the complete todo function
 	//instead of editing the object, you will need to remove it from the array

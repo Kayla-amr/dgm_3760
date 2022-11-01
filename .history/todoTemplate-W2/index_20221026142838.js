@@ -27,7 +27,7 @@ function displayTodos(todos) {
 	//for each todo in the array, add it to the container UL
 	todos.forEach(function(myTask) {
 		if (myTask.status != true) {
-			todoTaskUl.innerHTML += `<li data-todoId='${myTask.id}'> ${myTask.name} <button class="removeBtn" onclick="deleteTask()">-</button></li>`;
+			todoTaskUl.innerHTML += `<li data-todoId='${myTask.id}'> ${myTask.name} </li>`;
 		} else {
 			completedTaskUL.style.textDecoration = 'line-through';
 			completedTaskUL.innerHTML += `<li data-todoId='${myTask.id}'> ${myTask.name} <button class="removeBtn" onclick="deleteTask()">-</button></li>`;
@@ -68,8 +68,8 @@ function editTask() {
 //create a function to delete todos
 function deleteTask() {
 	const removeBtn = document.querySelector('.removeBtn');
-	const idx = myList.findIndex((todo) => todo.obj == removeBtn);
-	myList.splice(idx, 1);
+	const todoIdx = myList.findIndex((todo) => todo.obj == removeBtn);
+	myList.splice(todoIdx, 1);
 	displayTodos(myList);
 	//much the same as the complete todo function
 	//instead of editing the object, you will need to remove it from the array

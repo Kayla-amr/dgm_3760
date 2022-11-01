@@ -65,15 +65,7 @@ function editTask() {
 	//IE: myList[todoIDX].status
 }
 
-//create a function to delete todos
-function deleteTask() {
-	const removeBtn = document.querySelector('.removeBtn');
-	const idx = myList.findIndex((todo) => todo.obj == removeBtn);
-	myList.splice(idx, 1);
-	displayTodos(myList);
-	//much the same as the complete todo function
-	//instead of editing the object, you will need to remove it from the array
-}
+
 
 function deleteComplete() {
 	myList.forEach((todo, index, array) => {
@@ -83,6 +75,15 @@ function deleteComplete() {
 	})
 }
 
+//create a function to delete todos
+function deleteTask() {
+	const removeBtn = document.querySelector('.removeBtn');
+	const todoIdx = myList.findIndex((todo) => todo.obj == removeBtn);
+	myList.splice(todoIdx, 1);
+	displayTodos(myList);
+	//much the same as the complete todo function
+	//instead of editing the object, you will need to remove it from the array
+}
 
 //for complete and delete event listeners you will need to listen for events on the UL
 
