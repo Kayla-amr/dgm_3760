@@ -92,7 +92,6 @@ const todoTaskUl = document.querySelector('.todoTasks'); //get a reference to th
 const completedTaskUL = document.querySelector('.completedTasks'); //get a reference to the task container UL
 const clearBtn = document.querySelector('#clearBtn'); //clear button
 const removeBtn = document.querySelector('.removeBtn');
-
 addBtn.addEventListener('click', (event) => {
 	addTask();
 });

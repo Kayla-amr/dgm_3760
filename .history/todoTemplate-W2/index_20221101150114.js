@@ -19,7 +19,7 @@ let myList = [
 document.querySelector('.formTitle').innerText = 'Basic App Form';
 
 //view todods
-
+id =
 function displayTodos(todos) {
 	//clear out any tasks (li elements) that are in the UL
 	todoTaskUl.innerHTML = '';
@@ -57,7 +57,6 @@ function editTask() {
 	const clickedTodoId = event.target.dataset.todoid;
 	const todoIdx = myList.findIndex((todo) => todo.id == clickedTodoId);
 	myList[todoIdx].status = !myList[todoIdx].status;
-	console.log(myList)
 	displayTodos(myList);
 	// function will take 1 parameter (input) an id of the todo to complete
 	// find the todo to complete and then change the value of status in the todo object
@@ -68,9 +67,9 @@ function editTask() {
 
 //create a function to delete todos
 function deleteTask() {
-	
-	const todoIdx = myList.findIndex((todo) => todo.obj == removeBtn);
-	myList.splice(todoIdx, 1);
+	const removeBtn = document.querySelector('.removeBtn');
+	const idx = myList.findIndex((todo) => todo.obj == removeBtn);
+	myList.splice(idx, 1);
 	displayTodos(myList);
 	//much the same as the complete todo function
 	//instead of editing the object, you will need to remove it from the array
@@ -91,17 +90,12 @@ const addBtn = document.querySelector('.addTask'); //store element object for th
 const todoTaskUl = document.querySelector('.todoTasks'); //get a reference to the task container UL
 const completedTaskUL = document.querySelector('.completedTasks'); //get a reference to the task container UL
 const clearBtn = document.querySelector('#clearBtn'); //clear button
-const removeBtn = document.querySelector('.removeBtn');
 
 addBtn.addEventListener('click', (event) => {
 	addTask();
 });
 
 todoTaskUl.addEventListener('click', (event) => {
-	editTask();
-});
-
-completedTaskUL.addEventListener('click', (event) => {
 	editTask();
 });
 

@@ -69,7 +69,7 @@ function editTask() {
 //create a function to delete todos
 function deleteTask() {
 	
-	const todoIdx = myList.findIndex((todo) => todo.obj == removeBtn);
+	const todoIdx = myList.findIndex((todo) => todo.id == removeBtn);
 	myList.splice(todoIdx, 1);
 	displayTodos(myList);
 	//much the same as the complete todo function

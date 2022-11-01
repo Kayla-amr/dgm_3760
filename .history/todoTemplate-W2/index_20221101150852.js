@@ -68,7 +68,7 @@ function editTask() {
 
 //create a function to delete todos
 function deleteTask() {
-	
+	const removeBtn = document.querySelector('.removeBtn');
 	const todoIdx = myList.findIndex((todo) => todo.obj == removeBtn);
 	myList.splice(todoIdx, 1);
 	displayTodos(myList);
@@ -91,17 +91,12 @@ const addBtn = document.querySelector('.addTask'); //store element object for th
 const todoTaskUl = document.querySelector('.todoTasks'); //get a reference to the task container UL
 const completedTaskUL = document.querySelector('.completedTasks'); //get a reference to the task container UL
 const clearBtn = document.querySelector('#clearBtn'); //clear button
-const removeBtn = document.querySelector('.removeBtn');
 
 addBtn.addEventListener('click', (event) => {
 	addTask();
 });
 
-todoTaskUl.addEventListener('click', (event) => {
-	editTask();
-});
-
-completedTaskUL.addEventListener('click', (event) => {
+myList.addEventListener('click', (event) => {
 	editTask();
 });
 
