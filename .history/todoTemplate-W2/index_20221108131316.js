@@ -18,7 +18,7 @@ let myList = [
 		name: 'Organize music',
 		category: 'Chores',
 		due_date: 'Wednesday',
-		status: false
+		status: true
 	}
 ];
 
@@ -92,7 +92,8 @@ function deleteComplete() {
 }
 
 function remaining() {
-	remainingTasks.textContent = `You have ${todoTaskUl.tagName.length} items to be complete`;
+	remainingTasks.textContent = `You have ${todoTaskUl.tagName.length} items to be completed`;
+	console.log(todoTaskUl.getElementsByTagName('li').length)
 }
 
 remaining();

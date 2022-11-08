@@ -18,7 +18,7 @@ let myList = [
 		name: 'Organize music',
 		category: 'Chores',
 		due_date: 'Wednesday',
-		status: false
+		status: true
 	}
 ];
 
@@ -92,9 +92,10 @@ function deleteComplete() {
 }
 
 function remaining() {
-	remainingTasks.textContent = `You have ${todoTaskUl.tagName.length} items to be complete`;
+	remainingTasks.textContent = `You have ${todoTaskUl.tagName.length} remaining items left to be completed`;
+	
 }
-
+console.log(remaining)
 remaining();
 //for complete and delete event listeners you will need to listen for events on the UL
 

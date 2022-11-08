@@ -18,7 +18,7 @@ let myList = [
 		name: 'Organize music',
 		category: 'Chores',
 		due_date: 'Wednesday',
-		status: false
+		status: true
 	}
 ];
 
@@ -36,6 +36,7 @@ function displayTodos(todos) {
 		if (myTask.status != true) {
 			todoTaskUl.innerHTML += `<li data-todoId='${myTask.id}'> ${myTask.name} <button class="removeBtn" onclick="deleteTask()">-</button></li>`;
 
+			remainingTasks.textContent = `You have ${todoTaskUl.name.length} remaining items left to be completed`;
 		} else {
 			completedTaskUL.style.textDecoration = 'line-through';
 			completedTaskUL.innerHTML += `<li data-todoId='${myTask.id}'> ${myTask.name} <button class="removeBtn" onclick="deleteTask()">-</button></li>`;
@@ -92,10 +93,13 @@ function deleteComplete() {
 }
 
 function remaining() {
-	remainingTasks.textContent = `You have ${todoTaskUl.tagName.length} items to be complete`;
+	let todoTaskUl = document.querySelector('.todoTasks').getElementsByTagName('li').length;
+
+	remainingTasks.textContent = `You have ${todoTaskUl} remaining items left to be completed`;
 }
 
 remaining();
+
 //for complete and delete event listeners you will need to listen for events on the UL
 
 addBtn.addEventListener('click', (event) => {

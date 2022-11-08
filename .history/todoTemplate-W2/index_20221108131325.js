@@ -18,7 +18,7 @@ let myList = [
 		name: 'Organize music',
 		category: 'Chores',
 		due_date: 'Wednesday',
-		status: false
+		status: true
 	}
 ];
 
