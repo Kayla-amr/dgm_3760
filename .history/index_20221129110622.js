@@ -49,7 +49,7 @@ function displayTodos(todos) {
 
 function addTask() {
 	let userInput = document.querySelector('.userInput').value;
-	let todoType = document.querySelector('.todoType').value;
+
 	const newTodoObj = {
 		id: myList.length + 1,
 		name: userInput,
@@ -64,6 +64,8 @@ function addTask() {
 
 
 //add categories
+
+
 // create a function to complete todos
 function editTask() {
 	const clickedTodoId = event.target.dataset.todoid;

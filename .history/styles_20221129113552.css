@@ -30,7 +30,6 @@ ul{
 }
 .left-side{
     grid-area: 2 /span 1;
-    padding: 10px;
     border-right: solid 3px #ebe9e9ae;
 }
 .right-side{

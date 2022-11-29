@@ -5,6 +5,7 @@ const clearBtn = document.querySelector('#clearBtn'); //clear button
 const removeBtn = document.querySelector('.removeBtn');
 const remainingTasks = document.querySelector('.remainingTasks');
 
+
 let myList = [
 	{
 		id: 0,
@@ -49,7 +50,7 @@ function displayTodos(todos) {
 
 function addTask() {
 	let userInput = document.querySelector('.userInput').value;
-	let todoType = document.querySelector('.todoType').value;
+
 	const newTodoObj = {
 		id: myList.length + 1,
 		name: userInput,

@@ -23,18 +23,7 @@ ul{
     padding: 20px;
     width: 20rem;
     display: grid;
-}
-.formTitle{
-    grid-area: 1 /span 4;
-    
-}
-.left-side{
-    grid-area: 2 /span 1;
-    padding: 10px;
-    border-right: solid 3px #ebe9e9ae;
-}
-.right-side{
-    grid-area: 2 /span 4;
+    align-items: center;
 }
 
 .todoTasks{

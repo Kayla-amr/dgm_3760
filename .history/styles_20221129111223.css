@@ -10,31 +10,17 @@ h2{
     margin: 0;
     padding: 5px;
 }
-ul{
-    padding: 0;
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
 
+.left-side(
+    
+)
 .taskForm{
     background-color: #262524;
     padding: 20px;
     width: 20rem;
-    display: grid;
-}
-.formTitle{
-    grid-area: 1 /span 4;
-    
-}
-.left-side{
-    grid-area: 2 /span 1;
-    padding: 10px;
-    border-right: solid 3px #ebe9e9ae;
-}
-.right-side{
-    grid-area: 2 /span 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .todoTasks{

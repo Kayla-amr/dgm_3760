@@ -4,6 +4,8 @@ const completedTaskUL = document.querySelector('.completedTasks'); //get a refer
 const clearBtn = document.querySelector('#clearBtn'); //clear button
 const removeBtn = document.querySelector('.removeBtn');
 const remainingTasks = document.querySelector('.remainingTasks');
+const todoType = document.querySelector('.todoType').value;
+const userInput = document.querySelector('.userInput').value;
 
 let myList = [
 	{
@@ -48,8 +50,8 @@ function displayTodos(todos) {
 //add todos
 
 function addTask() {
-	let userInput = document.querySelector('.userInput').value;
-	let todoType = document.querySelector('.todoType').value;
+	
+
 	const newTodoObj = {
 		id: myList.length + 1,
 		name: userInput,
@@ -64,6 +66,7 @@ function addTask() {
 
 
 //add categories
+
 // create a function to complete todos
 function editTask() {
 	const clickedTodoId = event.target.dataset.todoid;

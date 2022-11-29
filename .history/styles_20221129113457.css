@@ -26,12 +26,11 @@ ul{
 }
 .formTitle{
     grid-area: 1 /span 4;
-    
+    margin: 10px;
+    border-right: solid 1px #a8a8a8;
 }
 .left-side{
     grid-area: 2 /span 1;
-    padding: 10px;
-    border-right: solid 3px #ebe9e9ae;
 }
 .right-side{
     grid-area: 2 /span 4;
